@@ -1,26 +1,49 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-brand-white: #ffffff;
+  --color-brand-cream: #fcfbf8;
+  --color-brand-gold-light: #e5c885;
+  --color-brand-gold-primary: #c39d54;
+  --color-brand-gold-dark: #9a7b3e;
+  --color-brand-text-main: #2c2c2c;
+  --color-brand-text-muted: #6e6e6e;
+
+  --font-serif: var(--font-playfair), Georgia, serif;
+  --font-script: var(--font-alex-brush), cursive;
+  --font-sans: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+
+  --shadow-luxury: 0 4px 20px rgba(195, 157, 84, 0.15);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  body {
+    @apply bg-brand-white font-sans font-light text-brand-text-main antialiased;
+  }
+
+  input,
+  select,
+  textarea {
+    @apply w-full border-b border-brand-gold-light bg-transparent px-0 py-3 font-sans text-base text-brand-text-main outline-none transition-colors placeholder:text-brand-text-muted/60 focus:border-brand-gold-primary;
+  }
+
+  select {
+    @apply appearance-none;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@utility btn-base {
+  @apply inline-flex min-h-[44px] items-center justify-center rounded-sm px-6 py-3 font-sans text-xs font-medium uppercase tracking-[0.2em] transition-all duration-300;
+}
+
+@utility btn-primary {
+  @apply btn-base bg-brand-gold-primary text-brand-white hover:bg-brand-gold-dark shadow-luxury;
+}
+
+@utility btn-ghost {
+  @apply btn-base border border-brand-gold-primary text-brand-gold-primary hover:bg-brand-gold-primary hover:text-brand-white;
 }
