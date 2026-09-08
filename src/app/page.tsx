@@ -1,69 +1,79 @@
 import Image from "next/image";
+import Link from "next/link";
+import { bioParagraphs, mantra, mantraIntro } from "@/content/bio";
+import { ctas } from "@/lib/navigation";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
+    <>
+      <section className="bg-brand-cream py-24">
+        <div className="mx-auto flex max-w-7xl flex-col items-center px-6 text-center">
+          <Image
+            src="/images/logo.png"
+            alt="Take Up Space on Purpose — Sherry Anne Crowe"
+            width={1260}
+            height={1260}
+            priority
+            className="w-64 drop-shadow-[0_4px_20px_rgba(195,157,84,0.15)] sm:w-80 md:w-96"
+          />
+          <h1 className="mt-12 font-serif text-3xl tracking-[0.15em] uppercase text-brand-text-main md:text-4xl">
+            Sherry Anne Crowe
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="mt-4 font-script text-3xl text-brand-gold-primary md:text-4xl">
+            Take Up Space on Purpose
           </p>
+          <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+            <Link href={ctas.book.href} className="btn-primary">
+              {ctas.book.label}
+            </Link>
+            <Link href={ctas.shop.href} className="btn-ghost">
+              {ctas.shop.label}
+            </Link>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <section className="bg-brand-white py-24">
+        <div className="mx-auto max-w-prose space-y-8 px-6 text-lg leading-loose text-brand-text-main">
+          <h2 className="text-center font-serif text-2xl tracking-wide md:text-3xl">
+            My Story
+          </h2>
+          <span className="block text-center text-brand-gold-primary" aria-hidden>
+            ✦
+          </span>
+          {bioParagraphs.map((paragraph, i) => (
+            <p
+              key={i}
+              className={
+                i === 0
+                  ? "first-letter:float-left first-letter:mr-3 first-letter:mt-1 first-letter:font-serif first-letter:text-6xl first-letter:leading-[0.8] first-letter:text-brand-gold-primary"
+                  : undefined
+              }
+            >
+              {paragraph}
+            </p>
+          ))}
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section className="bg-brand-cream py-24">
+        <div className="mx-auto max-w-3xl px-6 text-center">
+          <p className="text-base uppercase tracking-[0.2em] text-brand-text-muted">
+            {mantraIntro}
+          </p>
+          <blockquote className="mt-12">
+            <span className="block text-2xl text-brand-gold-primary" aria-hidden>
+              ✦
+            </span>
+            <p className="my-8 font-script text-4xl leading-snug text-brand-gold-primary md:text-5xl">
+              {mantra}
+            </p>
+            <span className="block text-2xl text-brand-gold-primary" aria-hidden>
+              ✦
+            </span>
+          </blockquote>
+        </div>
+      </section>
+    </>
   );
 }
