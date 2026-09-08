@@ -15,7 +15,13 @@ export type BookingFormValues = {
   message: string;
 };
 
+const isStaticDemo = process.env.NEXT_PUBLIC_STATIC_DEMO === "true";
+
 async function submitBooking(values: BookingFormValues): Promise<void> {
+  if (isStaticDemo) {
+    await new Promise((resolve) => setTimeout(resolve, 800));
+    return;
+  }
   const response = await fetch("/api/book-event", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
