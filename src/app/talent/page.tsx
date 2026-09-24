@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const portfolio = [
   { src: "/images/sherry-1.jpg", alt: "Sherry Anne Crowe in a gold satin blouse", width: 1047, height: 1571 },
-  { src: "/images/sherry-2.jpg", alt: "Sherry Anne Crowe full-length in a grey wrap and leather trousers", width: 1047, height: 1571 },
+  { src: "/images/sherry-6.jpg", alt: "Sherry Anne Crowe standing in a gold satin blouse and white trousers", width: 1333, height: 2000 },
   { src: "/images/sherry-7.jpg", alt: "Sherry Anne Crowe seated in a grey knit, white shirt and denim", width: 1333, height: 2000 },
   { src: "/images/sherry-5.jpg", alt: "Sherry Anne Crowe smiling in a black dress", width: 1500, height: 2100 },
 ];
