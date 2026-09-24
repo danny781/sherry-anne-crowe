@@ -9,9 +9,13 @@ export const metadata: Metadata = {
 };
 
 const portfolio = [
-  { src: "/images/sherry-1.jpg", alt: "Sherry Anne Crowe in a gold satin blouse", width: 1047, height: 1571 },
-  { src: "/images/sherry-6.jpg", alt: "Sherry Anne Crowe standing in a gold satin blouse and white trousers", width: 1333, height: 2000 },
-  { src: "/images/sherry-7.jpg", alt: "Sherry Anne Crowe seated in a grey knit, white shirt and denim", width: 1333, height: 2000 },
+  { src: "/images/model-dg.jpg", alt: "Sherry Anne Crowe on the runway in a lilac fringe dress", width: 512, height: 640 },
+  { src: "/images/model-khush-paris.jpg", alt: "Sherry Anne Crowe walking a Paris street show in a purple silk coat", width: 512, height: 640 },
+  { src: "/images/model-iab.jpg", alt: "Sherry Anne Crowe in a black jumpsuit and printed kimono jacket", width: 496, height: 640 },
+  { src: "/images/model-drunkgirl.jpg", alt: "Sherry Anne Crowe on the runway in a champagne beaded gown", width: 512, height: 640 },
+  { src: "/images/model-khush-sari.jpg", alt: "Sherry Anne Crowe in a red and gold sari", width: 430, height: 640 },
+  { src: "/images/model-mw.jpg", alt: "Sherry Anne Crowe in a sequined It Girl top with green feather shoulders", width: 512, height: 640 },
+  { src: "/images/model-khush-bd.jpg", alt: "Sherry Anne Crowe in a black sculpted gown and beret", width: 428, height: 640 },
   { src: "/images/sherry-5.jpg", alt: "Sherry Anne Crowe smiling in a black dress", width: 1500, height: 2100 },
 ];
 
@@ -34,19 +38,19 @@ export default function TalentPage() {
 
       <section className="bg-brand-white py-24">
         <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-[1.5fr_1fr] lg:items-start lg:px-10">
-          <div className="columns-2 gap-6 [&>*]:mb-6 md:gap-8 md:[&>*]:mb-8">
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6">
             {portfolio.map((photo) => (
               <figure
                 key={photo.src}
-                className="break-inside-avoid overflow-hidden bg-brand-cream shadow-luxury"
+                className="aspect-[4/5] overflow-hidden bg-brand-cream shadow-luxury"
               >
                 <Image
                   src={photo.src}
                   alt={photo.alt}
                   width={photo.width}
                   height={photo.height}
-                  sizes="(min-width: 1024px) 30vw, 50vw"
-                  className="h-auto w-full object-cover"
+                  sizes="(min-width: 1024px) 20vw, (min-width: 768px) 30vw, 50vw"
+                  className="h-full w-full object-cover object-top"
                 />
               </figure>
             ))}
