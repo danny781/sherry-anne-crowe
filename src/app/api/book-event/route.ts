@@ -43,7 +43,7 @@ function buildEmailHtml(b: BookingFormValues): string {
     .join("");
   return `<div style="font-family:Helvetica,Arial,sans-serif;max-width:600px;margin:0 auto;padding:24px;color:#2C2C2C">
   <h1 style="font-family:Georgia,serif;font-weight:400;font-size:22px;letter-spacing:.05em;margin:0 0 4px">New Event Booking Request</h1>
-  <p style="color:#C39D54;margin:0 0 24px">Take Up Space on Purpose</p>
+  <p style="color:#CBB26A;margin:0 0 24px"><span style="font-family:'Bodoni Moda',Georgia,serif;text-transform:uppercase;letter-spacing:.12em">Take Up Space</span> <span style="font-family:Allura,cursive;font-size:1.3em">on Purpose</span><sup style="font-size:.5em">TM</sup></p>
   <table style="border-collapse:collapse">${table}</table>
   <h2 style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#6E6E6E;margin:24px 0 8px">Message / Details</h2>
   <p style="white-space:pre-wrap;line-height:1.6;margin:0">${escapeHtml(b.message)}</p>

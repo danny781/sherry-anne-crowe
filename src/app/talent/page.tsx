@@ -53,9 +53,9 @@ export default function TalentPage() {
               <Image
                 src="/images/logo.png"
                 alt=""
-                width={1260}
-                height={1260}
-                className="w-2/3 opacity-80"
+                width={1254}
+                height={1254}
+                className="w-2/3 rounded-full opacity-80"
               />
             </div>
           </div>

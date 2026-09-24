@@ -4,16 +4,18 @@
   --color-brand-white: #ffffff;
   --color-brand-cream: #fcfbf8;
   --color-brand-gold-light: #e5c885;
-  --color-brand-gold-primary: #c39d54;
+  --color-brand-gold-primary: #cbb26a;
   --color-brand-gold-dark: #9a7b3e;
   --color-brand-text-main: #2c2c2c;
   --color-brand-text-muted: #6e6e6e;
 
   --font-serif: var(--font-playfair), Georgia, serif;
-  --font-script: var(--font-alex-brush), cursive;
+  --font-script: var(--font-allura), cursive;
+  --font-brand-serif: var(--font-bodoni), "Bodoni Moda", Georgia, serif;
+  --font-brand-name: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
   --font-sans: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
 
-  --shadow-luxury: 0 4px 20px rgba(195, 157, 84, 0.15);
+  --shadow-luxury: 0 4px 20px rgba(203, 178, 106, 0.18);
 }
 
 @layer base {

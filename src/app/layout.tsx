@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
-import { Alex_Brush, Montserrat, Playfair_Display } from "next/font/google";
+import {
+  Allura,
+  Bodoni_Moda,
+  Cormorant_Garamond,
+  Montserrat,
+  Playfair_Display,
+} from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { MobileCtaBar } from "@/components/MobileCtaBar";
@@ -11,10 +17,24 @@ const playfair = Playfair_Display({
   display: "swap",
 });
 
-const alexBrush = Alex_Brush({
-  variable: "--font-alex-brush",
+const bodoni = Bodoni_Moda({
+  variable: "--font-bodoni",
   subsets: ["latin"],
   weight: "400",
+  display: "swap",
+});
+
+const allura = Allura({
+  variable: "--font-allura",
+  subsets: ["latin"],
+  weight: "400",
+  display: "swap",
+});
+
+const cormorant = Cormorant_Garamond({
+  variable: "--font-cormorant",
+  subsets: ["latin"],
+  weight: ["500", "600"],
   display: "swap",
 });
 
@@ -38,7 +58,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${playfair.variable} ${alexBrush.variable} ${montserrat.variable} h-full`}
+      className={`${playfair.variable} ${bodoni.variable} ${allura.variable} ${cormorant.variable} ${montserrat.variable} h-full`}
     >
       <body className="flex min-h-full flex-col">
         <Header />

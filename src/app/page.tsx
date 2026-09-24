@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { BrandMark, withBrandMark } from "@/components/BrandMark";
 import { bioParagraphs, mantra, mantraIntro } from "@/content/bio";
 import { ctas } from "@/lib/navigation";
 
@@ -11,17 +12,15 @@ export default function HomePage() {
           <Image
             src="/images/logo.png"
             alt="Take Up Space on Purpose — Sherry Anne Crowe"
-            width={1260}
-            height={1260}
+            width={1254}
+            height={1254}
             priority
-            className="w-64 drop-shadow-[0_4px_20px_rgba(195,157,84,0.15)] sm:w-80 md:w-96"
+            className="w-64 rounded-full shadow-luxury sm:w-80 md:w-96"
           />
-          <h1 className="mt-12 font-serif text-3xl tracking-[0.15em] uppercase text-brand-text-main md:text-4xl">
+          <h1 className="mt-12 font-brand-name text-3xl font-medium tracking-[0.25em] uppercase text-brand-text-main md:text-4xl">
             Sherry Anne Crowe
           </h1>
-          <p className="mt-4 font-script text-3xl text-brand-gold-primary md:text-4xl">
-            Take Up Space on Purpose
-          </p>
+          <BrandMark variant="display" size="lg" className="mt-5" />
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
             <Link href={ctas.book.href} className="btn-primary">
               {ctas.book.label}
@@ -50,7 +49,7 @@ export default function HomePage() {
                   : undefined
               }
             >
-              {paragraph}
+              {withBrandMark(paragraph, `bio-${i}`)}
             </p>
           ))}
         </div>
@@ -66,7 +65,7 @@ export default function HomePage() {
               ✦
             </span>
             <p className="my-8 font-script text-4xl leading-snug text-brand-gold-primary md:text-5xl">
-              {mantra}
+              {withBrandMark(mantra, "mantra")}
             </p>
             <span className="block text-2xl text-brand-gold-primary" aria-hidden>
               ✦

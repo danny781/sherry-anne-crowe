@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { withBrandMark } from "@/components/BrandMark";
 import { formatPrice, type Product } from "@/content/products";
 
 export function ProductCard({ product }: { product: Product }) {
@@ -20,9 +21,9 @@ export function ProductCard({ product }: { product: Product }) {
             <Image
               src="/images/logo.png"
               alt=""
-              width={1260}
-              height={1260}
-              className="w-1/2 opacity-90"
+              width={1254}
+              height={1254}
+              className="w-1/2 rounded-full opacity-90"
             />
           </div>
         )}
@@ -34,7 +35,9 @@ export function ProductCard({ product }: { product: Product }) {
       </div>
 
       <div className="mt-6 flex flex-1 flex-col">
-        <h2 className="font-serif text-xl leading-snug text-brand-text-main">{product.title}</h2>
+        <h2 className="font-serif text-xl leading-snug text-brand-text-main">
+          {withBrandMark(product.title, product.slug)}
+        </h2>
         <p className="mt-2 text-sm leading-relaxed text-brand-text-muted">{product.description}</p>
 
         <div className="mt-4">

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { BrandMark } from "@/components/BrandMark";
 import { ctas, navLinks } from "@/lib/navigation";
 
 export function Header() {
@@ -25,12 +26,10 @@ export function Header() {
             className="flex min-h-[44px] flex-col justify-center"
             aria-label="Sherry Anne Crowe — Home"
           >
-            <span className="font-serif text-lg tracking-[0.15em] uppercase text-brand-text-main md:text-xl">
+            <span className="font-brand-name text-lg font-medium tracking-[0.2em] uppercase text-brand-text-main md:text-xl">
               Sherry Anne Crowe
             </span>
-            <span className="font-script text-base leading-none text-brand-gold-primary md:text-lg">
-              Take Up Space on Purpose
-            </span>
+            <BrandMark className="text-[0.7rem] leading-none md:text-xs" />
           </Link>
 
           <nav className="hidden items-center gap-10 lg:flex" aria-label="Primary">
@@ -117,9 +116,7 @@ export function Header() {
             </Link>
           ))}
           <span className="mt-4 text-brand-gold-primary">✦</span>
-          <p className="font-script text-2xl text-brand-gold-primary">
-            Take Up Space on Purpose
-          </p>
+          <BrandMark variant="display" size="md" />
         </nav>
       </div>
     </>
