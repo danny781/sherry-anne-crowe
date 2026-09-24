@@ -33,21 +33,21 @@ export default function HomePage() {
       </section>
 
       <section className="bg-brand-white py-24">
-        <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-[2fr_3fr] lg:items-start lg:px-10">
-          <figure className="mx-auto w-full max-w-sm overflow-hidden bg-brand-cream shadow-luxury lg:sticky lg:top-40 lg:max-w-none">
-            <Image
-              src="/images/sherry-3.jpg"
-              alt="Sherry Anne Crowe laughing in a grey knit and denim"
-              width={1333}
-              height={2000}
-              sizes="(min-width: 1024px) 35vw, 24rem"
-              className="h-auto w-full object-cover"
-            />
-          </figure>
-          <div className="mx-auto max-w-prose space-y-8 text-lg leading-loose text-brand-text-main lg:mx-0">
-            <h2 className="font-serif text-2xl tracking-wide md:text-3xl">
-              My Story
-            </h2>
+        <div className="mx-auto max-w-4xl px-6 text-lg leading-loose text-brand-text-main lg:px-10">
+          <h2 className="font-serif text-2xl tracking-wide md:text-3xl">
+            My Story
+          </h2>
+          <div className="mt-8 flow-root space-y-8">
+            <figure className="mb-6 w-full max-w-sm overflow-hidden bg-brand-cream shadow-luxury sm:float-left sm:mr-10 sm:mb-4 sm:w-72 lg:w-80">
+              <Image
+                src="/images/sherry-3.jpg"
+                alt="Sherry Anne Crowe laughing in a grey knit and denim"
+                width={1333}
+                height={2000}
+                sizes="(min-width: 1024px) 20rem, (min-width: 640px) 18rem, 24rem"
+                className="h-auto w-full object-cover"
+              />
+            </figure>
             {bioParagraphs.map((paragraph, i) => (
               <p
                 key={i}
