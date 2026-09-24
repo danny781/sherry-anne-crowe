@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sherry Anne Crowe — Take Up Space on Purpose
 
-## Getting Started
+Next.js (App Router) + Tailwind CSS v4 + TypeScript.
 
-First, run the development server:
+## Local development
 
 ```bash
+npm install
+cp .env.example .env.local   # fill in RESEND_API_KEY and BOOKING_NOTIFY_EMAIL
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Booking form emails
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+`/api/book-event` sends each submission via [Resend](https://resend.com).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Variable | Required | Description |
+| --- | --- | --- |
+| `RESEND_API_KEY` | yes | API key from https://resend.com/api-keys |
+| `BOOKING_NOTIFY_EMAIL` | yes | Recipient(s), comma-separated |
+| `BOOKING_FROM_EMAIL` | no | Sender; must be on a Resend-verified domain. Defaults to `onboarding@resend.dev` |
 
-## Learn More
+## Deploy to Vercel with a GoDaddy domain
 
-To learn more about Next.js, take a look at the following resources:
+1. Push this repo to GitHub and import it at https://vercel.com/new → **Deploy**.
+2. In the Vercel project: **Settings → Environment Variables** — add the variables above, then **Deployments → Redeploy**.
+3. **Settings → Domains** — add `yourdomain.com` and `www.yourdomain.com`.
+4. In GoDaddy: **My Products → Domain → DNS** — add/replace:
+   - `A` record: Name `@`, Value `76.76.21.21`
+   - `CNAME` record: Name `www`, Value `cname.vercel-dns.com`
+   (Remove any existing `A`/`CNAME` on `@` / `www` that point elsewhere, e.g. GoDaddy parking.)
+5. Wait for Vercel's domain check to turn green (usually minutes, up to 48h).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Static demo build
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+`NEXT_PUBLIC_STATIC_DEMO=true npm run build` produces a static export in `out/`
+(delete `src/app/api` first — route handlers aren't supported in export mode). The
+booking form only simulates submission in this mode.
