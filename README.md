@@ -17,7 +17,7 @@ npm run dev
 | Variable | Required | Description |
 | --- | --- | --- |
 | `RESEND_API_KEY` | yes | API key from https://resend.com/api-keys |
-| `BOOKING_NOTIFY_EMAIL` | yes | Recipient(s), comma-separated |
+| `BOOKING_NOTIFY_EMAIL` | yes | Recipient(s), comma-separated. Production value: `crowe.sherrya@gmail.com,balddanny@gmail.com,takeupspace01@gmail.com` (non-account addresses require a verified domain in Resend) |
 | `BOOKING_FROM_EMAIL` | no | Sender; must be on a Resend-verified domain. Defaults to `onboarding@resend.dev` |
 
 ## Deploy to Vercel with a GoDaddy domain
