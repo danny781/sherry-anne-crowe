@@ -17,6 +17,7 @@ const portfolio = [
   { src: "/images/model-mw.jpg", alt: "Sherry Anne Crowe in a sequined It Girl top with green feather shoulders", width: 512, height: 640 },
   { src: "/images/model-khush-bd.jpg", alt: "Sherry Anne Crowe in a black sculpted gown and beret", width: 428, height: 640 },
   { src: "/images/sherry-5.jpg", alt: "Sherry Anne Crowe smiling in a black dress", width: 1500, height: 2100 },
+  { src: "/images/sherry-8.jpg", alt: "Sherry Anne Crowe standing with arms crossed in a grey knit and denim", width: 1333, height: 2000 },
 ];
 
 const mailto =
