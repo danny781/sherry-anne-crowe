@@ -58,10 +58,7 @@ export function BookingForm() {
         role="status"
         className="mx-auto max-w-xl border border-brand-gold-primary bg-brand-cream p-10 text-center shadow-luxury md:p-14"
       >
-        <span className="block text-2xl text-brand-gold-primary" aria-hidden>
-          ✦
-        </span>
-        <p className="mt-6 font-script text-4xl text-brand-gold-primary md:text-5xl">
+        <p className="font-script text-4xl text-brand-gold-primary md:text-5xl">
           Thank you
         </p>
         <h2 className="mt-4 font-serif text-xl tracking-wide text-brand-text-main md:text-2xl">
@@ -71,9 +68,6 @@ export function BookingForm() {
           Sherry Anne will be in touch shortly to discuss your event. In the meantime, keep
           taking up space on purpose.
         </p>
-        <span className="mt-8 block text-2xl text-brand-gold-primary" aria-hidden>
-          ✦
-        </span>
       </div>
     );
   }

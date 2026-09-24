@@ -64,9 +64,6 @@ export default function TalentPage() {
             <h2 className="font-serif text-2xl tracking-wide text-brand-text-main md:text-3xl">
               Representation
             </h2>
-            <span className="mt-4 block text-brand-gold-primary" aria-hidden>
-              ✦
-            </span>
             <dl className="mt-6 space-y-4">
               <div>
                 <dt className="text-xs uppercase tracking-[0.2em] text-brand-text-muted">Agency</dt>

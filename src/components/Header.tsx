@@ -23,21 +23,21 @@ export function Header() {
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-10">
           <Link
             href="/"
-            className="flex min-h-[44px] flex-col justify-center"
+            className="flex min-h-[44px] shrink-0 flex-col justify-center"
             aria-label="Sherry Anne Crowe — Home"
           >
-            <span className="font-brand-name text-lg font-medium tracking-[0.2em] uppercase text-brand-text-main md:text-xl">
+            <span className="whitespace-nowrap font-brand-name text-lg font-medium tracking-[0.2em] uppercase text-brand-text-main xl:text-xl">
               Sherry Anne Crowe
             </span>
             <BrandMark className="text-[0.7rem] leading-none md:text-xs" />
           </Link>
 
-          <nav className="hidden items-center gap-10 lg:flex" aria-label="Primary">
+          <nav className="hidden items-center gap-6 lg:flex xl:gap-9" aria-label="Primary">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`font-serif text-sm tracking-[0.12em] transition-colors hover:text-brand-gold-primary ${
+                className={`whitespace-nowrap font-serif text-[0.8rem] tracking-[0.1em] transition-colors hover:text-brand-gold-primary xl:text-sm ${
                   pathname === link.href
                     ? "text-brand-gold-primary"
                     : "text-brand-text-main"
@@ -48,11 +48,11 @@ export function Header() {
             ))}
           </nav>
 
-          <div className="hidden items-center gap-3 md:flex">
-            <Link href={ctas.shop.href} className="btn-ghost lg:hidden xl:inline-flex">
+          <div className="hidden shrink-0 items-center gap-3 md:flex">
+            <Link href={ctas.shop.href} className="btn-ghost lg:hidden 2xl:inline-flex">
               {ctas.shop.label}
             </Link>
-            <Link href={ctas.book.href} className="btn-primary">
+            <Link href={ctas.book.href} className="btn-primary whitespace-nowrap">
               {ctas.book.label}
             </Link>
           </div>
@@ -115,7 +115,6 @@ export function Header() {
               {link.label}
             </Link>
           ))}
-          <span className="mt-4 text-brand-gold-primary">✦</span>
           <BrandMark variant="display" size="md" />
         </nav>
       </div>

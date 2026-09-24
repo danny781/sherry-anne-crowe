@@ -37,9 +37,6 @@ export default function HomePage() {
           <h2 className="text-center font-serif text-2xl tracking-wide md:text-3xl">
             My Story
           </h2>
-          <span className="block text-center text-brand-gold-primary" aria-hidden>
-            ✦
-          </span>
           {bioParagraphs.map((paragraph, i) => (
             <p
               key={i}

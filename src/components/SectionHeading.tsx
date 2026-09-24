@@ -15,9 +15,6 @@ export function SectionHeading({ eyebrow, title, description }: SectionHeadingPr
       <h1 className="font-serif text-3xl tracking-wide text-brand-text-main md:text-5xl">
         {title}
       </h1>
-      <span className="mt-6 block text-brand-gold-primary" aria-hidden>
-        ✦
-      </span>
       {description && (
         <p className="mt-6 text-base leading-relaxed text-brand-text-muted md:text-lg">
           {description}
