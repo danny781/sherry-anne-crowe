@@ -20,24 +20,13 @@ export function Header() {
   return (
     <>
       <header className="sticky top-0 z-40 border-b border-brand-gold-light/40 bg-brand-white/70 backdrop-blur-md">
-        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-10">
-          <Link
-            href="/"
-            className="flex min-h-[44px] shrink-0 flex-col justify-center"
-            aria-label="Sherry Anne Crowe — Home"
-          >
-            <span className="whitespace-nowrap font-brand-name text-lg font-medium tracking-[0.2em] uppercase text-brand-text-main xl:text-xl">
-              Sherry Anne Crowe
-            </span>
-            <BrandMark className="text-[0.7rem] leading-none md:text-xs" />
-          </Link>
-
-          <nav className="hidden items-center gap-6 lg:flex xl:gap-9" aria-label="Primary">
+        <div className="mx-auto flex h-16 max-w-7xl items-center justify-center px-6 lg:h-20 lg:px-10">
+          <nav className="hidden items-center gap-8 lg:flex xl:gap-12" aria-label="Primary">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`whitespace-nowrap font-serif text-[0.8rem] tracking-[0.1em] transition-colors hover:text-brand-gold-primary xl:text-sm ${
+                className={`whitespace-nowrap font-serif text-sm tracking-[0.12em] transition-colors hover:text-brand-gold-primary ${
                   pathname === link.href
                     ? "text-brand-gold-primary"
                     : "text-brand-text-main"
@@ -48,22 +37,13 @@ export function Header() {
             ))}
           </nav>
 
-          <div className="hidden shrink-0 items-center gap-3 md:flex">
-            <Link href={ctas.shop.href} className="btn-ghost lg:hidden 2xl:inline-flex">
-              {ctas.shop.label}
-            </Link>
-            <Link href={ctas.book.href} className="btn-primary whitespace-nowrap">
-              {ctas.book.label}
-            </Link>
-          </div>
-
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
             aria-expanded={open}
             aria-controls="mobile-menu"
             aria-label={open ? "Close menu" : "Open menu"}
-            className="relative z-50 flex h-11 w-11 items-center justify-center lg:hidden"
+            className="relative z-50 ml-auto flex h-11 w-11 items-center justify-center lg:hidden"
           >
             <span className="relative block h-4 w-6">
               <span
@@ -83,6 +63,14 @@ export function Header() {
               />
             </span>
           </button>
+        </div>
+        <div className="hidden justify-center gap-3 border-t border-brand-gold-light/40 py-3 md:flex">
+          <Link href={ctas.book.href} className="btn-primary">
+            {ctas.book.label}
+          </Link>
+          <Link href={ctas.shop.href} className="btn-ghost">
+            {ctas.shop.label}
+          </Link>
         </div>
       </header>
 

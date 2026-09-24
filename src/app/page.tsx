@@ -33,22 +33,34 @@ export default function HomePage() {
       </section>
 
       <section className="bg-brand-white py-24">
-        <div className="mx-auto max-w-prose space-y-8 px-6 text-lg leading-loose text-brand-text-main">
-          <h2 className="text-center font-serif text-2xl tracking-wide md:text-3xl">
-            My Story
-          </h2>
-          {bioParagraphs.map((paragraph, i) => (
-            <p
-              key={i}
-              className={
-                i === 0
-                  ? "first-letter:float-left first-letter:mr-3 first-letter:mt-1 first-letter:font-serif first-letter:text-6xl first-letter:leading-[0.8] first-letter:text-brand-gold-primary"
-                  : undefined
-              }
-            >
-              {withBrandMark(paragraph, `bio-${i}`)}
-            </p>
-          ))}
+        <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-[2fr_3fr] lg:items-start lg:px-10">
+          <figure className="mx-auto w-full max-w-sm overflow-hidden bg-brand-cream shadow-luxury lg:sticky lg:top-40 lg:max-w-none">
+            <Image
+              src="/images/sherry-3.jpg"
+              alt="Sherry Anne Crowe laughing in a grey knit and denim"
+              width={1333}
+              height={2000}
+              sizes="(min-width: 1024px) 35vw, 24rem"
+              className="h-auto w-full object-cover"
+            />
+          </figure>
+          <div className="mx-auto max-w-prose space-y-8 text-lg leading-loose text-brand-text-main lg:mx-0">
+            <h2 className="font-serif text-2xl tracking-wide md:text-3xl">
+              My Story
+            </h2>
+            {bioParagraphs.map((paragraph, i) => (
+              <p
+                key={i}
+                className={
+                  i === 0
+                    ? "first-letter:float-left first-letter:mr-3 first-letter:mt-1 first-letter:font-serif first-letter:text-6xl first-letter:leading-[0.8] first-letter:text-brand-gold-primary"
+                    : undefined
+                }
+              >
+                {withBrandMark(paragraph, `bio-${i}`)}
+              </p>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -58,13 +70,19 @@ export default function HomePage() {
             {mantraIntro}
           </p>
           <blockquote className="mt-12">
-            <span className="block text-2xl text-brand-gold-primary" aria-hidden>
+            <span
+              className="block text-2xl text-brand-gold-primary"
+              aria-hidden
+            >
               ✦
             </span>
             <p className="my-8 font-script text-4xl leading-snug text-brand-gold-primary md:text-5xl">
               {withBrandMark(mantra, "mantra")}
             </p>
-            <span className="block text-2xl text-brand-gold-primary" aria-hidden>
+            <span
+              className="block text-2xl text-brand-gold-primary"
+              aria-hidden
+            >
               ✦
             </span>
           </blockquote>

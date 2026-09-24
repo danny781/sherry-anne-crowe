@@ -3,7 +3,7 @@ import Image from "next/image";
 import { SectionHeading } from "@/components/SectionHeading";
 
 export const metadata: Metadata = {
-  title: "Talent & Modeling",
+  title: "Acting & Modeling",
   description:
     "Sherry Anne Crowe — model, actor and host. Represented by AAM (Aspiring Artists Management).",
 };
@@ -24,8 +24,8 @@ export default function TalentPage() {
       <section className="bg-brand-cream py-24">
         <div className="px-6">
           <SectionHeading
-            eyebrow="Modelling · Acting · Hosting"
-            title="Talent & Modeling"
+            eyebrow="Modelling · Acting"
+            title="Acting & Modeling"
             description="For casting, campaign and commercial inquiries, please reach out directly to Sherry Anne’s representation."
           />
         </div>
@@ -49,15 +49,6 @@ export default function TalentPage() {
                 />
               </figure>
             ))}
-            <div className="flex aspect-[2/3] break-inside-avoid items-center justify-center border border-brand-gold-light/60 bg-brand-cream">
-              <Image
-                src="/images/logo.png"
-                alt=""
-                width={1254}
-                height={1254}
-                className="w-2/3 rounded-full opacity-80"
-              />
-            </div>
           </div>
 
           <aside className="border border-brand-gold-primary bg-brand-cream p-8 shadow-luxury lg:sticky lg:top-28">
