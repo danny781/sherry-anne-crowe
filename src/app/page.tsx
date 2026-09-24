@@ -1,8 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
-import { BrandMark, withBrandMark } from "@/components/BrandMark";
+import { withBrandMark } from "@/components/BrandMark";
 import { bioParagraphs, mantra, mantraIntro } from "@/content/bio";
-import { ctas } from "@/lib/navigation";
 
 export default function HomePage() {
   return (
@@ -17,18 +15,7 @@ export default function HomePage() {
             priority
             className="w-64 rounded-full shadow-luxury sm:w-80 md:w-96"
           />
-          <h1 className="mt-12 font-brand-name text-3xl font-medium tracking-[0.25em] uppercase text-brand-text-main md:text-4xl">
-            Sherry Anne Crowe
-          </h1>
-          <BrandMark variant="display" size="lg" className="mt-5" />
-          <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-            <Link href={ctas.book.href} className="btn-primary">
-              {ctas.book.label}
-            </Link>
-            <Link href={ctas.shop.href} className="btn-ghost">
-              {ctas.shop.label}
-            </Link>
-          </div>
+          <h1 className="sr-only">Sherry Anne Crowe — Take Up Space on Purpose</h1>
         </div>
       </section>
 
