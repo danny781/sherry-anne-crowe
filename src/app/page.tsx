@@ -27,8 +27,8 @@ export default function HomePage() {
           <div className="mt-8 flow-root space-y-8">
             <figure className="mb-6 w-full max-w-sm overflow-hidden bg-brand-cream shadow-luxury sm:float-left sm:mr-10 sm:mb-4 sm:w-72 lg:w-80">
               <Image
-                src="/images/sherry-3.jpg"
-                alt="Sherry Anne Crowe laughing in a grey knit and denim"
+                src="/images/sherry-1.jpg"
+                alt="Sherry Anne Crowe in a gold satin blouse"
                 width={1333}
                 height={2000}
                 sizes="(min-width: 1024px) 20rem, (min-width: 640px) 18rem, 24rem"
