@@ -2,8 +2,8 @@ export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/book-event", label: "Book an Event" },
   { href: "/past-events", label: "Past Events" },
-  { href: "/shop", label: "Shop" },
   { href: "/talent", label: "Acting & Modeling" },
+  { href: "/shop", label: "Shop" },
 ] as const;
 
 export const ctas = {

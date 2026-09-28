@@ -77,8 +77,13 @@ export default function TalentPage() {
               <a href={mailto} className="btn-primary">
                 Email Representation
               </a>
-              <a href="#" className="btn-ghost">
-                View Agency Facebook
+              <a
+                href="https://www.instagram.com/aamtalent"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-ghost"
+              >
+                Contact Agency
               </a>
             </div>
           </aside>

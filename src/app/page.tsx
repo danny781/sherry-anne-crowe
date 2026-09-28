@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { withBrandMark } from "@/components/BrandMark";
-import { bioParagraphs, mantra, mantraIntro } from "@/content/bio";
+import { bioParagraphs, mantraIntro, mantraLead } from "@/content/bio";
 
 export default function HomePage() {
   return (
@@ -53,25 +53,22 @@ export default function HomePage() {
 
       <section className="bg-brand-cream py-24">
         <div className="mx-auto max-w-3xl px-6 text-center">
-          <p className="text-base uppercase tracking-[0.2em] text-brand-text-muted">
+          <p className="text-base font-semibold uppercase tracking-[0.2em] text-brand-text-main">
             {mantraIntro}
           </p>
           <blockquote className="mt-12">
-            <span
-              className="block text-2xl text-brand-gold-primary"
-              aria-hidden
-            >
-              ✦
-            </span>
-            <p className="my-8 font-script text-4xl leading-snug text-brand-gold-primary md:text-5xl">
-              {withBrandMark(mantra, "mantra")}
+            <p className="font-script text-4xl leading-snug text-brand-gold-primary md:text-5xl">
+              {mantraLead}
             </p>
-            <span
-              className="block text-2xl text-brand-gold-primary"
-              aria-hidden
-            >
-              ✦
-            </span>
+            <p className="mt-6 font-brand-serif text-2xl uppercase leading-none tracking-[0.2em] text-brand-gold-primary md:text-3xl">
+              Take Up Space
+            </p>
+            <p className="relative mt-2 inline-block font-script text-5xl leading-[1.1] text-brand-gold-primary md:text-6xl">
+              on Purpose
+              <span className="absolute -right-[0.9em] top-[0.2em] font-sans text-[0.2em] uppercase tracking-wider">
+                TM
+              </span>
+            </p>
           </blockquote>
         </div>
       </section>
