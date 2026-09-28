@@ -9,15 +9,15 @@ export const metadata: Metadata = {
 };
 
 const portfolio = [
-  { src: "/images/model-dg.jpg", alt: "Sherry Anne Crowe on the runway in a lilac fringe dress", width: 512, height: 640 },
-  { src: "/images/model-khush-paris.jpg", alt: "Sherry Anne Crowe walking a Paris street show in a purple silk coat", width: 512, height: 640 },
-  { src: "/images/model-iab.jpg", alt: "Sherry Anne Crowe in a black jumpsuit and printed kimono jacket", width: 496, height: 640 },
-  { src: "/images/model-drunkgirl.jpg", alt: "Sherry Anne Crowe on the runway in a champagne beaded gown", width: 512, height: 640 },
-  { src: "/images/model-khush-sari.jpg", alt: "Sherry Anne Crowe in a red and gold sari", width: 430, height: 640 },
-  { src: "/images/model-mw.jpg", alt: "Sherry Anne Crowe in a sequined It Girl top with green feather shoulders", width: 512, height: 640 },
-  { src: "/images/model-khush-bd.jpg", alt: "Sherry Anne Crowe in a black sculpted gown and beret", width: 428, height: 640 },
   { src: "/images/sherry-5.jpg", alt: "Sherry Anne Crowe smiling in a black dress", width: 1500, height: 2100 },
   { src: "/images/sherry-8.jpg", alt: "Sherry Anne Crowe standing with arms crossed in a grey knit and denim", width: 1333, height: 2000 },
+  { src: "/images/model-khush-bd.jpg", alt: "Sherry Anne Crowe in a black sculpted gown and beret", width: 428, height: 640 },
+  { src: "/images/model-khush-sari.jpg", alt: "Sherry Anne Crowe in a red and gold sari", width: 430, height: 640 },
+  { src: "/images/model-mw.jpg", alt: "Sherry Anne Crowe in a sequined It Girl top with green feather shoulders", width: 512, height: 640 },
+  { src: "/images/model-khush-paris.jpg", alt: "Sherry Anne Crowe walking a Paris street show in a purple silk coat", width: 512, height: 640 },
+  { src: "/images/model-iab.jpg", alt: "Sherry Anne Crowe in a black jumpsuit and printed kimono jacket", width: 496, height: 640 },
+  { src: "/images/model-dg.jpg", alt: "Sherry Anne Crowe on the runway in a lilac fringe dress", width: 512, height: 640 },
+  { src: "/images/model-drunkgirl.jpg", alt: "Sherry Anne Crowe on the runway in a champagne beaded gown", width: 512, height: 640 },
 ];
 
 const mailto =
