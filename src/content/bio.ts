@@ -8,4 +8,4 @@ export const bioParagraphs = [
 export const mantraIntro =
   "This is where we take a deep breath… and say it together, out loud.";
 
-export const mantraLead = "I am enough. I choose me. And I will";
+export const mantraLead = "I am enough, I choose me, and I will…";
